@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-05EXYL6W08"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-05EXYL6W08');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tai Furuzawa Design Office</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", YuGothic, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: flex-start;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 900px; width: 100%; }
+        header { margin-bottom: 2rem; }
+        .logo-image { max-width: 350px; height: auto; display: block; }
+
+        /* ナビゲーション */
+        .tab-nav { margin-top: 3rem; display: flex; justify-content: flex-start; gap: 40px; }
+        .tab-label { padding: 0 0 2px 0; cursor: pointer; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; opacity: 0.3; transition: opacity 0.3s; position: relative; display: inline-block; }
+        .tab-label:hover { opacity: 0.7; }
+        .tab-switch { display: none; }
+        #tab-profile:checked ~ .tab-nav label[for="tab-profile"], 
+        #tab-portfolio:checked ~ .tab-nav label[for="tab-portfolio"] { opacity: 1; }
+        #tab-profile:checked ~ .tab-nav label[for="tab-profile"]::after, 
+        #tab-portfolio:checked ~ .tab-nav label[for="tab-portfolio"]::after { 
+            content: ""; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background-color: #000; 
+        }
+
+        /* コンテンツ表示切り替え */
+        .tab-content { display: none; padding-top: 2.5rem; }
+        #tab-profile:checked ~ .content-profile, 
+        #tab-portfolio:checked ~ .content-portfolio { display: block; }
+
+        /* Profile Section */
+        .profile-name { font-size: 1.1rem; font-weight: 500; margin: 0 0 1.5rem 0; letter-spacing: 0.1em; }
+        .profile-grid { display: grid; grid-template-columns: 110px 1fr; gap: 10px 20px; margin-bottom: 2.5rem; }
+        .profile-grid div { font-size: 0.85rem; }
+
+        /* Portfolio (Renewing state) */
+        .renewing-text { font-size: 0.85rem; letter-spacing: 0.05em; opacity: 0.6; padding-top: 1rem; }
+
+        /* Contact Section */
+        .contact-info { margin-top: 5rem; border-top: 1px solid #eeeeee; padding-top: 3rem; }
+        .contact-row { display: flex; align-items: center; margin-bottom: 1rem; }
+        .label { width: 100px; font-weight: 400; font-size: 0.85rem; }
+        
+        /* アンダーラインをタイトにする調整 */
+        a { 
+            color: #000; 
+            text-decoration: none; 
+            border-bottom: 1px solid #000; 
+            display: inline-block; 
+            line-height: 1.1; 
+            padding-bottom: 1px; 
+        }
+        
+        footer { margin-top: 1rem; font-size: 0.7rem; opacity: 0.4; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="logo.jpg" alt="Tai Furuzawa Design Office" class="logo-image">
+    </header>
+
+    <input type="radio" name="tab-item" id="tab-profile" class="tab-switch" checked>
+    <input type="radio" name="tab-item" id="tab-portfolio" class="tab-switch">
+
+    <nav class="tab-nav">
+        <label class="tab-label" for="tab-profile">About</label>
+        <label class="tab-label" for="tab-portfolio">Works</label>
+    </nav>
+
+    <div class="tab-content content-profile">
+        <div class="profile-name">古澤 泰</div>
+        
+        <div class="profile-grid">
+            <div>1994</div><div>三重県出身</div>
+            <div>2017</div><div>大同大学工学部建築学科(宇野享研究室) 卒業</div>
+            <div>2017-2022</div><div>株式会社藤本壮介建築設計事務所</div>
+            <div>2022-</div><div>Tai Furuzawa Design Office 設立</div>
+            <div>2024-</div><div>三重県立四日市工業高校 非常勤講師</div>
+        </div>
+        
+        <div class="profile-grid">
+            <div>1994</div><div>Born in Mie, Japan</div>
+            <div>2017</div><div>Daido University, Architecture</div>
+            <div>2017-2022</div><div>Sou Fujimoto Architects</div>
+            <div>2022-</div><div>Established - Tai Furuzawa Design Office</div>
+            <div>2024-</div><div>Lecture at Yokkaichi industrial high school</div>
+        </div>
+    </div>
+
+    <div class="tab-content content-portfolio">
+        <div class="renewing-text">
+            Renewing website now...
+        </div>
+    </div>
+
+    <section class="contact-info">
+        <div class="contact-row">
+            <span class="label">Instagram</span>
+            <a href="https://www.instagram.com/tai_furuzawa" target="_blank">@tai_furuzawa</a>
+        </div>
+        <div class="contact-row">
+            <span class="label">Contact</span>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@taifuruzawa.net" target="_blank">info@taifuruzawa.net</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tai Furuzawa Design Office</p>
+    </footer>
+</div>
+
+</body>
+</html>
