@@ -8,7 +8,6 @@
       gtag('js', new Date());
       gtag('config', 'G-05EXYL6W08');
     </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
@@ -16,7 +15,6 @@
     <title>Tai Furuzawa Design Office</title>
     
     <style>
-        /* --- 基本スタイル (PC向け) --- */
         body {
             background-color: #ffffff;
             color: #000000;
@@ -32,7 +30,6 @@
         header { margin-bottom: 2rem; }
         .logo-image { max-width: 350px; height: auto; display: block; }
 
-        /* タブ切り替え */
         .tab-nav { margin-top: 3rem; display: flex; justify-content: flex-start; gap: 40px; }
         .tab-label { cursor: pointer; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; opacity: 0.3; transition: opacity 0.3s; position: relative; }
         .tab-label:hover { opacity: 0.7; }
@@ -48,12 +45,10 @@
         #tab-profile:checked ~ .content-profile, 
         #tab-portfolio:checked ~ .content-portfolio { display: block; }
 
-        /* プロフィールグリッド */
         .profile-name { font-size: 1.1rem; font-weight: 500; margin: 0 0 1.5rem 0; letter-spacing: 0.1em; }
         .profile-grid { display: grid; grid-template-columns: 110px 1fr; gap: 10px 20px; margin-bottom: 2.5rem; }
         .profile-grid div { font-size: 0.85rem; }
 
-        /* Contact Section */
         .contact-info { margin-top: 5rem; border-top: 1px solid #eeeeee; padding-top: 3rem; }
         .contact-row { display: flex; align-items: center; margin-bottom: 1rem; }
         .label { width: 100px; font-weight: 400; font-size: 0.85rem; }
@@ -61,14 +56,19 @@
         a { color: #000; text-decoration: none; border-bottom: 1px solid #000; display: inline-block; line-height: 1.1; padding-bottom: 1px; }
         footer { margin-top: 1rem; font-size: 0.7rem; opacity: 0.4; }
 
-        /* --- スマホ向けレスポンシブ (768px以下) --- */
+        /* スマホ向けレイアウト */
         @media screen and (max-width: 768px) {
             body { padding: 20px; }
             .logo-image { max-width: 220px; }
             .tab-nav { gap: 20px; }
-            .profile-grid { grid-template-columns: 1fr; gap: 5px; margin-bottom: 2rem; }
-            /* スマホ表示時のみフォントサイズを微調整 */
-            .profile-grid div { font-size: 0.75rem; }
+            
+            /* 年と経歴を維持するためにグリッド比率を調整 */
+            .profile-grid { 
+                grid-template-columns: 70px 1fr; 
+                gap: 5px 10px; 
+                margin-bottom: 2rem; 
+            }
+            .profile-grid div { font-size: 0.7rem; letter-spacing: -0.02em; }
             .profile-name { font-size: 1rem; }
             .contact-row { flex-direction: column; align-items: flex-start; }
             .label { font-size: 0.75rem; margin-bottom: 0.2rem; }
