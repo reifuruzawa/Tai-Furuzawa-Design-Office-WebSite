@@ -45,7 +45,10 @@
         #tab-profile:checked ~ .content-profile, 
         #tab-portfolio:checked ~ .content-portfolio { display: block; }
 
-        .profile-name { font-size: 1.1rem; font-weight: 500; margin: 0 0 1.5rem 0; letter-spacing: 0.1em; }
+        /* 名前部分：英名を元のサイズに戻す調整 */
+        .profile-name { font-size: 0.95rem; font-weight: 500; margin: 0 0 1.5rem 0; letter-spacing: 0.1em; line-height: 1.4; }
+        .profile-name .english-name { font-size: 1.1rem; }
+        
         .profile-grid { display: grid; grid-template-columns: 110px 1fr; gap: 10px 20px; margin-bottom: 2.5rem; }
         .profile-grid div { font-size: 0.85rem; }
 
@@ -53,7 +56,16 @@
         .contact-row { display: flex; align-items: center; margin-bottom: 1rem; }
         .label { width: 100px; font-weight: 400; font-size: 0.85rem; }
         
-        a { color: #000; text-decoration: none; border-bottom: 1px solid #000; display: inline-block; line-height: 1.1; padding-bottom: 1px; }
+        a { 
+            color: #000; 
+            text-decoration: none; 
+            border-bottom: 0.5px solid #000; 
+            display: inline-block; 
+            line-height: 1.1; 
+            padding-bottom: 1px; 
+            font-size: 0.85rem;
+        }
+        
         footer { margin-top: 1rem; font-size: 0.7rem; opacity: 0.4; }
 
         /* スマホ向けレイアウト */
@@ -62,14 +74,14 @@
             .logo-image { max-width: 220px; }
             .tab-nav { gap: 20px; }
             
-            /* 年と経歴を維持するためにグリッド比率を調整 */
             .profile-grid { 
                 grid-template-columns: 70px 1fr; 
                 gap: 5px 10px; 
                 margin-bottom: 2rem; 
             }
             .profile-grid div { font-size: 0.7rem; letter-spacing: -0.02em; }
-            .profile-name { font-size: 1rem; }
+            .profile-name { font-size: 0.85rem; }
+            .profile-name .english-name { font-size: 1rem; } /* スマホ用も個別に調整 */
             .contact-row { flex-direction: column; align-items: flex-start; }
             .label { font-size: 0.75rem; margin-bottom: 0.2rem; }
         }
@@ -91,8 +103,8 @@
     </nav>
 
     <div class="tab-content content-profile">
-    <div class="profile-name">Tai Furuzawa<br>古澤 泰</div>
-    <div class="profile-grid">
+        <div class="profile-name"><span class="english-name">Tai Furuzawa</span><br>古澤 泰</div>
+        <div class="profile-grid">
             <div>1994</div><div>三重県出身</div>
             <div>2017</div><div>大同大学工学部建築学科(宇野享研究室) 卒業</div>
             <div>2017-2022</div><div>株式会社藤本壮介建築設計事務所</div>
@@ -129,7 +141,3 @@
 </div>
 </body>
 </html>
-
-
-
-
